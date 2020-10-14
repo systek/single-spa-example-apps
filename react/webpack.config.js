@@ -5,11 +5,10 @@ module.exports = (webpackConfigEnv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "Systek",
     projectName: "react",
-    externals: ["react", "react-dom"],
     webpackConfigEnv,
   });
 
   return webpackMerge.smart(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    externals: ["react", "react-dom"],
   });
 };
